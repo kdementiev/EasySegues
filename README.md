@@ -1,23 +1,24 @@
 # EasySegues
 
-[![CI Status](http://img.shields.io/travis/kdementiev/EasySegues.svg?style=flat)](https://travis-ci.org/kdementiev/EasySegues)
-[![Version](https://img.shields.io/cocoapods/v/EasySegues.svg?style=flat)](http://cocoapods.org/pods/EasySegues)
-[![License](https://img.shields.io/cocoapods/l/EasySegues.svg?style=flat)](http://cocoapods.org/pods/EasySegues)
-[![Platform](https://img.shields.io/cocoapods/p/EasySegues.svg?style=flat)](http://cocoapods.org/pods/EasySegues)
-
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
 ## Installation
 
 EasySegues is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
-```ruby
+```sh
 pod "EasySegues"
+```
+
+## How to use
+
+Just call `performSegueWithIdentifier:` on your ViewController:
+
+
+```sh
+[yourController performSegueWithIdentifier:@"SomeSegueIdentifier"
+prepareCallback:^(UIViewController *target) {
+// Pass your data to 'target' etc.
+}];
 ```
 
 ## Author
