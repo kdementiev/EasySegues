@@ -16,9 +16,9 @@ Just call `performSegueWithIdentifier:` on your ViewController:
 
 ```sh
 [yourController performSegueWithIdentifier:@"SomeSegueIdentifier"
-prepareCallback:^(UIViewController *target) {
-// Pass your data to 'target' etc.
-}];
+                           prepareCallback:^(UIViewController *target) {
+                              // Pass your data to 'target' etc.
+                           }];
 ```
 
 ## Author
