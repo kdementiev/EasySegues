@@ -1,0 +1,16 @@
+PODS:
+  - EasySegues (0.1.0)
+
+DEPENDENCIES:
+  - EasySegues (from `../`)
+
+EXTERNAL SOURCES:
+  EasySegues:
+    :path: ../
+
+SPEC CHECKSUMS:
+  EasySegues: 73cd4112690d9136a622143beed3929376d3cad6
+
+PODFILE CHECKSUM: c33eaccdd466e7ed5d8116afad570c5ac097a234
+
+COCOAPODS: 1.2.0

@@ -1,0 +1,22 @@
+{
+  "name": "EasySegues",
+  "version": "0.1.0",
+  "summary": "A short description of EasySegues.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/kdementiev/EasySegues",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "kdementiev": "scorch1993@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/kdementiev/EasySegues.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "EasySegues/Classes/**/*"
+}
