@@ -1,0 +1,6 @@
+use_frameworks!
+target 'EasySegues_Tests' do
+  pod 'EasySegues', :path => '../'
+  
+  
+end
