@@ -9,6 +9,7 @@
 #import "UIViewController+EasySegues.h"
 
 #import <objc/runtime.h>
+#import "ESClosureContainer.h"
 
 @implementation UIViewController (EasySegues)
 
@@ -26,13 +27,17 @@
 }
 
 - (void)performSegueWithIdentifier:(NSString *)identifier prepareCallback:(UIViewControllerSeguesPrepareCallback)callback {
-    [self performSegueWithIdentifier:identifier sender:callback];
+    
+    ESClosureContainer *container = [ESClosureContainer new];
+    container.callback = callback;
+    
+    [self performSegueWithIdentifier:identifier sender: container];
 }
 
 - (void)prepareDataForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    if ([sender isKindOfClass: NSClassFromString(@"NSBlock")]) {
-        UIViewControllerSeguesPrepareCallback callback = sender;
+    if ([sender isKindOfClass: [ESClosureContainer class]]) {
+        UIViewControllerSeguesPrepareCallback callback = ((ESClosureContainer*)sender).callback;
         callback(segue.destinationViewController);
     }
     
